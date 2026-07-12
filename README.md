@@ -239,29 +239,3 @@ training; the quality gates above run once a checkpoint exists. Note that exact
 board match compounds per square error over 64 squares, so even a strong 99%
 square accuracy yields only about a 53% exact board rate; gate the two
 independently.
-
-## Roadmap
-
-Scaffolded and working:
-
-- Random placement generation and placement / class index conversions (tested).
-- Domain and noise augmentation with exact corner tracking (tested).
-- Canonical renderer (python-chess builtin set plus colour themes).
-- 13 FOSS lichess piece sets under `assets/piece_sets/`, composited by the
-  renderer and used by the datasets by default (see `ATTRIBUTION.md`).
-- Stage 1 and Stage 2 model definitions and datasets.
-- Streaming step based training phase over infinite fresh data, with periodic
-  validation, best and last checkpointing, throughput logging, and resume.
-- Evaluation harness and quality gate tests (per square accuracy, exact board
-  match, per class recall, corner error).
-- End to end inference pipeline (`BoardRecognizer`: image to FEN placement) with
-  perspective dewarp between the stages.
-
-Next up:
-
-- **Full page Stage 1 data.** Composite the board onto a rendered book page with
-  surrounding text and figures, so Stage 1 learns to locate a diagram on a page.
-  Until then the corner detector is trained on board fills frame renders only.
-- **PDF ingestion.** Extract page images from a book PDF and feed each page
-  through the pipeline (`page -> locate diagram -> dewarp -> classify -> FEN`).
-- **Real evaluation set.** Collect and label real book scans and photos.

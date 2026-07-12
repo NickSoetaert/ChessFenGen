@@ -1,0 +1,1 @@
+"""ChessFenGen augment package."""

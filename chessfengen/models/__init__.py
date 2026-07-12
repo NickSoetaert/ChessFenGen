@@ -1,0 +1,1 @@
+"""ChessFenGen models package."""

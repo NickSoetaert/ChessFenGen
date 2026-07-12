@@ -1,0 +1,6 @@
+- Never use em-dashes or other non-ascii characters in comments.
+- Use American English.
+- Never commit to git unless I specifically ask. If you do commit, do not mention Claude, ever.
+- Always explicitly type parameters and returns.
+- Never have a "silent fallback" option in any route. 
+  - If a change breaks previous behavior, never make the previous behavior a "fallback" - explicitly ask how to handle.

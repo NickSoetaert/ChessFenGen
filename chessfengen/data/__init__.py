@@ -1,0 +1,1 @@
+"""ChessFenGen data package."""

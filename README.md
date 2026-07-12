@@ -12,10 +12,10 @@ A full FEN has six fields:
 
 ```
 rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
-|__ piece placement __|                     |  |     | |  |
-                                      side _|  |     | |  |_ fullmove
-                                  castling ____|     | |____ halfmove
-                                          en passant_|
+|__ piece placement __|                     |  |   | | |
+                                      side _|  |   | | |_ fullmove
+                                  castling ____|   | |____ halfmove
+                                        en passant_|
 ```
 
 Only the **piece placement field** is visible in a picture of a board. Side to
